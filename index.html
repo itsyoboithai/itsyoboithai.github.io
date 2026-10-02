@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thai Tran — Computer Engineering, AI builder</title>
+<meta name="description" content="Thai Tran is a McGill computer engineering student building AI tools, MCP integrations and products. Founder of Claude Builder Club McGill.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#F5F7FA;--ink:#171A21;--mute:#5A6272;--line:#E4E8EE;--accent:#2B5BFF;--accent-soft:#EAF0FF;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 17px/1.6 "Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+header b{font-weight:700}
+nav{display:flex;gap:22px;font-size:15px;color:var(--mute)}
+nav a:hover{color:var(--ink)}
+section{padding:88px 0 0}
+h1{font-size:clamp(46px,9vw,104px);line-height:.98;letter-spacing:-.04em;font-weight:800}
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.03em;line-height:1.1;font-weight:700;margin-bottom:32px}
+h3{font-size:21px;letter-spacing:-.015em;line-height:1.25;font-weight:650}
+.hero{padding-top:84px}
+.lead{font-size:clamp(20px,2.4vw,26px);line-height:1.4;color:var(--mute);max-width:30em;margin-top:28px;letter-spacing:-.01em}
+.lead strong{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;padding:12px 20px;border-radius:999px;font-weight:600;font-size:16px;border:1px solid var(--line);transition:background .15s,border-color .15s}
+.btn:hover{border-color:var(--ink)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.main:hover{background:#1F48D6}
+.proof{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);color:var(--mute);font-size:15px}
+.proof b{color:var(--ink);font-weight:600}
+.hero>.wrap>*{animation:in .7s cubic-bezier(.2,.7,.2,1) both}
+.hero>.wrap>*:nth-child(2){animation-delay:.08s}.hero>.wrap>*:nth-child(3){animation-delay:.16s}.hero>.wrap>*:nth-child(4){animation-delay:.24s}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+.grid{display:grid;gap:20px}
+.card{background:var(--soft);border-radius:var(--r);padding:32px}
+.card.feature{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.meta{color:var(--mute);font-size:15px;margin-top:4px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.tags span{font-size:13.5px;font-weight:500;padding:3px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--mute)}
+dl{display:grid;gap:14px}
+dt{font-size:14px;font-weight:600;color:var(--accent)}
+dd{margin-top:2px}
+.card p{color:var(--mute);margin-top:12px}
+.card a.link{display:inline-block;margin-top:18px;font-weight:600;color:var(--accent);border-bottom:1px solid transparent}
+.card a.link:hover{border-color:var(--accent)}
+.two{grid-template-columns:1fr 1fr}
+.job{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.when{color:var(--mute);font-size:15px}
+.job ul{margin:14px 0 0;padding-left:20px;color:var(--mute)}
+.job li{margin-top:8px}.job li::marker{color:var(--accent)}
+details{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+summary::before{content:"+";display:inline-block;width:20px;color:var(--accent);transition:transform .2s}
+details[open] summary::before{transform:rotate(45deg)}
+details p{margin-top:10px}
+.skills{display:grid;grid-template-columns:200px 1fr;gap:12px 32px}
+.skills dt{color:var(--ink)}.skills dd{color:var(--mute);margin:0}
+.contact{background:var(--ink);color:#fff;border-radius:var(--r);padding:56px 40px;margin-bottom:24px}
+.contact h2{margin-bottom:12px}
+.contact p{color:#B9C0CE;max-width:30em}
+.contact .btn{border-color:#3A4152;color:#fff}.contact .btn:hover{border-color:#fff}
+.contact .btn.main{border-color:var(--accent)}
+footer{padding:24px 0 48px;color:var(--mute);font-size:14px}
+@media(max-width:760px){nav{gap:14px;font-size:14px}.card.feature,.two,.job,.skills{grid-template-columns:1fr}.job{gap:6px}.contact{padding:36px 24px}section{padding-top:64px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Thai Tran</b>
+<nav aria-label="Primary"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+<h1>Thai Tran</h1>
+<p class="lead">Computer engineering student at McGill. I build <strong>AI agents, MCP tools and the products around them</strong>, and I run the community where Montréal builds with Claude.</p>
+<div class="cta">
+<a class="btn main" href="mailto:minh.thai.tran@mail.mcgill.ca">Email me</a>
+<a class="btn" href="https://github.com/thaimtl">GitHub</a>
+<a class="btn" href="https://linkedin.com/in/thai-tran-minh">LinkedIn</a>
+</div>
+<div class="proof"><span><b>Anthropic</b> Campus Ambassador</span><span><b>300+</b> members in Claude Builder Club McGill</span><span><b>3×</b> hackathon award winner</span><span>McGill B.Eng., GPA 3.75/4.00</span></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Selected projects</h2>
+<div class="grid">
+<article class="card feature">
+<div><h3>Style It Yourself</h3><p class="meta">Product, design and backend lead · Jan 2026</p>
+<p>A wardrobe app that tells you whether an outfit works, and why. Open-sourced under AGPL-3.0 as the base for a larger consumer product.</p>
+<div class="tags"><span>Python</span><span>FastAPI</span><span>React</span><span>PostgreSQL</span><span>Supabase</span><span>Gemini API</span></div></div>
+<dl>
+<div><dt>Problem</dt><dd>Outfit apps suggest looks but can’t explain them, so people don’t trust them.</dd></div>
+<div><dt>What I built</dt><dd>A FastAPI backend with 20+ endpoints for closet management, outfit validation, AI recommendations and AI try-on.</dd></div>
+<div><dt>How it decides</dt><dd>A deterministic confidence score from HSL hue distance, formality thresholds, weighted RGB matching and a category pairing rule engine. Every mismatch comes with a plain-language reason.</dd></div>
+</dl></article>
+
+<div class="grid two">
+<article class="card"><h3>Uni-Verse</h3><p class="meta">Frontend developer · Oct 2025 · with Google Developer Group McGill</p>
+<p>A single place for McGill students to browse, filter and register for events from 100+ active clubs. Built 6+ reusable, responsive React components.</p>
+<div class="tags"><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Supabase</span></div>
+<a class="link" href="https://universeapp.ca">Visit universeapp.ca</a></article>
+<article class="card"><h3>McGill Ventures website</h3><p class="meta">Lead developer · Sep 2026 · in progress</p>
+<p>Leading the redesign of the organization’s public site: visual direction, information architecture and component system for every page. Built a reusable motion and UI kit that standardizes animation sitewide.</p>
+<div class="tags"><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Supabase</span><span>Vercel</span></div></article>
+</div>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<div>
+<div class="job"><div class="when">Apr – Aug 2026<br>Montréal, QC</div><div>
+<h3>AI Builder Intern</h3><p class="meta">TypeScript, React, tRPC, MCP, Temporal, LangGraph, PostgreSQL</p>
+<ul>
+<li>Shipped 50+ internal MCP tools running across 3+ agent harnesses on a shared tRPC layer. The core team adopted them as the base for the official Claude and ChatGPT marketplace plugins.</li>
+<li>Built durable, fault-tolerant automation workflows for long-running event operations, cutting 55+ hours of manual work every week across product, ops and finance.</li>
+<li>Developed calendar and checklist features, including a custom drag-and-drop scheduling engine and an MCP App widget that lets agents read and edit checklists inline.</li>
+</ul></div></div>
+
+<div class="job"><div class="when">Jan 2026 – Present<br>Montréal, QC</div><div>
+<h3>Claude Builder Campus Ambassador, Anthropic</h3><p class="meta">Founder, Claude Builder Club McGill</p>
+<ul>
+<li>Founded the club as Anthropic’s inaugural Campus Ambassador and grew it to 300+ members, with an exec team, dev team and sponsor pipeline built from scratch. Corporate sponsorships fund it entirely.</li>
+<li>Run workshops on AI fluency, Claude Code, agentic engineering and developer tooling, including sessions inside Engineering and Management courses at faculty invitation.</li>
+<li>Organized Montréal’s first Claude AI hackathon: 150+ participants chosen through a competitive application, sponsored by Anthropic, Brim Financial, Rootly AI and PCare+.</li>
+</ul></div></div>
+
+<div class="job"><div class="when">Aug 2024 – Jun 2028<br>Montréal, QC</div><div>
+<h3>McGill University</h3><p class="meta">B.Eng. Computer Engineering, Minor in Technological Entrepreneurship · GPA 3.75/4.00</p>
+<details><summary>Coursework and activities</summary>
+<p>Operating Systems, Computer Architecture, Data Structures &amp; Algorithms, Software Engineering, Software Validation, Design Principles and Methods, Machine Learning, Natural Language Processing. President of Claude Builder Club McGill, Lead Developer at McGill Ventures.</p></details>
+</div></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<dl class="skills">
+<dt>Languages</dt><dd>C, C++17, Python, Java, TypeScript, JavaScript, SQL, Bash</dd>
+<dt>Frameworks</dt><dd>Next.js, tRPC, FastAPI, Django, Temporal, NumPy, Java Spring Boot, Zod, Zustand</dd>
+<dt>Tools and infrastructure</dt><dd>Linux, Docker, Kubernetes, Git, GitHub Actions, PostgreSQL, MongoDB, Supabase, Neon DB, Vercel, Google Cloud Run, Cloudflare, Gradle, IntelliJ, VSCode, Claude Code, Figma, Linear, Notion</dd>
+</dl></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact">
+<h2>Let’s build something</h2>
+<p>I’m open to internships, collaborations and invitations to run a workshop or hackathon. Email is the fastest way to reach me.</p>
+<div class="cta">
+<a class="btn main" href="mailto:minh.thai.tran@mail.mcgill.ca">minh.thai.tran@mail.mcgill.ca</a>
+<a class="btn" href="https://linkedin.com/in/thai-tran-minh">LinkedIn</a>
+<a class="btn" href="https://github.com/thaimtl">GitHub</a>
+</div></div></div></section>
+</main>
+<footer><div class="wrap">© <span id="y">2026</span> Thai Tran · Montréal, QC</div></footer>
+<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
